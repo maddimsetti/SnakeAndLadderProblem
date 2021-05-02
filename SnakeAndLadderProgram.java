@@ -35,7 +35,12 @@ public class SnakeAndLadderProgram {
 		            break;
 		    }
 		System.out.println("The Position of Player:" +position);
+		       if (position > WINNING_POSITION ) {
+	                   position -= diceNumber;
+                           System.out.println("The Position of Player:" +position);
+                       }
 		}
+	System.out.println("The Final Position of Player:" +position);	
 	}
 
 }
