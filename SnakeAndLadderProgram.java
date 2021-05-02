@@ -12,10 +12,12 @@ public class SnakeAndLadderProgram {
 		System.out.println("Welcome the Player to Starts The Snake And Ladder Game at position 0");
 
 		int position = 0;
+		int dieRole = 0;
 
 		while ( position < WINNING_POSITION ) {
 		int diceNumber = (int) Math.floor(Math.random() * 10) % 6 + 1;
 		System.out.println("The Value Of Dice is " +diceNumber);
+		dieRole++;
 
 		int dieCheck = (int) Math.floor(Math.random() * 100) % 3;
 
@@ -35,12 +37,14 @@ public class SnakeAndLadderProgram {
 		            break;
 		    }
 		System.out.println("The Position of Player:" +position);
+		System.out.println("The Count of Die Role :" +dieRole);
 		       if (position > WINNING_POSITION ) {
 	                   position -= diceNumber;
                            System.out.println("The Position of Player:" +position);
                        }
 		}
-	System.out.println("The Final Position of Player:" +position);	
+	System.out.println("The Final Position of Player:" +position);
+	System.out.println("The Total number of Times Die Role :" +dieRole);
 	}
 
 }
